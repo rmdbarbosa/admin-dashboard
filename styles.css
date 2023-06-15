@@ -1,0 +1,327 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "sidebar header header header"
+    "sidebar content content content";
+  grid-template-rows: 1fr 4fr;
+  grid-template-columns: 0.6fr 1fr 1fr 1fr;
+  font-family: "Roboto", sans-serif;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #1992d4;
+  color: white;
+  font-weight: bold;
+}
+.header {
+  grid-area: header;
+  background-color: white;
+}
+.content {
+  grid-area: content;
+  background-color: #e2e8f0;
+}
+
+.sidebar-top {
+  margin-left: 20px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-areas: "icon dashboard";
+  height: 90px;
+}
+
+.sidebar-top > img {
+  height: 40px;
+  justify-self: center;
+  grid-area: icon;
+  align-self: center;
+}
+.sidebar-top > h1 {
+  align-self: center;
+  grid-area: dashboard;
+
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.sidebar-middle {
+  margin-left: 20px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  height: 300px;
+}
+
+.sidebar-middle > img {
+  justify-self: center;
+  align-self: center;
+}
+.sidebar-middle > h1 {
+  align-self: center;
+}
+
+.sidebar-bottom {
+  margin-left: 20px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  height: 150px;
+}
+
+.sidebar-bottom > img {
+  justify-self: center;
+  align-self: center;
+}
+.sidebar-bottom > h1 {
+  align-self: center;
+}
+
+.header-top {
+  margin-left: 20px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 0.2fr 2fr 1fr 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "magnify input bell bulldog h1";
+  height: 90px;
+}
+
+.header-top #magnify {
+  grid-area: magnify;
+  justify-self: center;
+  align-self: center;
+}
+.header-top > input {
+  align-self: center;
+  grid-area: input;
+  border-radius: 10px;
+  background-color: rgb(194, 194, 194);
+  width: 700px;
+  height: 25px;
+  border: none;
+}
+
+.header-top #bell {
+  grid-area: bell;
+  justify-self: end;
+  align-self: center;
+}
+.header-top #bulldog {
+  justify-self: center;
+  grid-area: bulldog;
+
+  align-self: center;
+}
+.header-top h1 {
+  align-self: center;
+  grid-area: h1;
+}
+
+.header-bottom {
+  margin-left: 20px;
+  margin-right: 300px;
+
+  height: 80px;
+  display: grid;
+  grid-template-areas: "img text button1 button2 button3";
+  grid-template-columns: 0.2fr 2fr 0.5fr 0.5fr 0.5fr;
+}
+
+.header-bottom > #bulldog {
+  justify-self: start;
+  align-self: center;
+  grid-area: img;
+}
+
+.header-bottom > h1 {
+  grid-area: text;
+  align-self: center;
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.header-bottom > button {
+  border-radius: 20px;
+  align-self: center;
+  height: 40px;
+  width: 120px;
+  color: white;
+  background-color: #1992d4;
+  border: none;
+}
+
+.header-bottom > .button1 {
+  grid-area: button1;
+}
+.header-bottom > .button2 {
+  grid-area: button2;
+}
+.header-bottom > .button3 {
+  grid-area: button3;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 0.1fr 2fr;
+  grid-template-areas:
+    "content1 content2"
+    "content3 content4";
+}
+
+.content > h1 {
+  margin-top: 25px;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.content > div {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.content > .content3 {
+}
+.content > .content4 {
+  display: grid;
+  grid-template-rows: 1fr 0.1fr 1fr;
+  grid-template-areas:
+    "div1"
+    "trending"
+    "div2";
+}
+
+.content4 > .div1 {
+  grid-area: div1;
+  background-color: white;
+  border-radius: 10px;
+  height: 300px;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.content4 > .div2 {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  border-radius: 10px;
+  height: 300px;
+  width: 300px;
+  grid-area: div2;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "img-insta1 insta1"
+    "img-insta2 insta2"
+    "img-insta3 insta3"
+    "img-insta4 insta4";
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+}
+
+.content4 > .trending {
+  font-weight: bold;
+  grid-area: trending;
+}
+
+.div2 > .insta1 {
+  grid-area: insta1;
+}
+.div2 > .insta2 {
+  grid-area: insta2;
+}
+.div2 > .insta3 {
+  grid-area: insta3;
+}
+.div2 > .insta4 {
+  grid-area: insta4;
+}
+
+.div2 > div {
+  font-weight: bold;
+}
+
+.div2 > img {
+  border-radius: 1000px;
+  justify-self: center;
+}
+
+.content4 > .div1 {
+  line-height: 15px;
+  display: grid;
+  grid-row: repeat(3, 1fr);
+  grid-template-areas:
+    "ann1"
+    "ann2"
+    "ann3";
+}
+
+.content4 > .div1 > .annoucement1 {
+  justify-self: center;
+  align-self: center;
+}
+.content4 > .div1 > .annoucement2 {
+  justify-self: center;
+  align-self: center;
+}
+.content4 > .div1 > .annoucement3 {
+  justify-self: center;
+  align-self: center;
+}
+
+.content3 {
+  display: grid;
+  grid-template-areas:
+    "card1 card2"
+    "card3 card4"
+    "card5 card6";
+  gap: 15px;
+}
+
+.content3 > .card {
+  border-left: 10px solid #be7d55;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.content3 > .card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 3fr 1fr;
+}
+
+.content3 > .card > h1 {
+  grid-column: 1;
+  grid-row: 1;
+  line-height: 25px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.content3 > .card > p {
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.content3 > .card > #icon1 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.content3 > .card > #icon2 {
+  margin-left: 30px;
+  grid-column: 2;
+  grid-row: 2;
+}
+.content3 > .card > #icon3 {
+  margin-left: 60px;
+  grid-column: 2;
+  grid-row: 2;
+}
